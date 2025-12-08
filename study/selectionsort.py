@@ -5,12 +5,17 @@ def selectionsort(arr):
             if(arr[j]<arr[min]):
                 min = j
         arr[i], arr[min] = arr[min], arr[i]
+        print(arr)
     return arr
 def bubblesort(arr):
     for i in range (len(arr)):
+        swap=False
         for j in range(i+1,len(arr)):
             if(arr[j]<arr[i]):
                 arr[i], arr[j] = arr[j], arr[i]
+                swap=True
+        if not swap:
+            break
     return arr
 
 
